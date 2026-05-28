@@ -7,7 +7,6 @@
 <title>ISTI</title>
 
 <style>
-
 body {
     margin: 0;
     padding: 0;
@@ -25,7 +24,7 @@ body {
 
 .logo {
     color: white;
-    font-size: 90px;
+    font-size: 84px;
     font-weight: normal;
     letter-spacing: 4px;
     line-height: 1;
@@ -39,61 +38,74 @@ body {
 .sun {
     position: absolute;
     width: 18px;
-    height: 19px;
-    background: #FFCC33;
+    height: 18px;
+    background: radial-gradient(circle, #FFD84D 0%, #FFCC33 100%);
     border-radius: 50%;
-
     left: 50%;
     transform: translateX(-50%);
-
-    bottom: -8px;
-    opacity: 0;
-
-    animation: sunrise 5s ease-out forwards;
+    bottom: -10px;
+    opacity: 0.02;
+    animation: sunrise 6s ease-out forwards;
 }
 
 @keyframes sunrise {
-
     0% {
-        bottom: -8px;
-        opacity: 0;
+        bottom: -10px;
+        opacity: 0.02;
     }
-
-    30% {
-        opacity: 1;
+    20% {
+        opacity: 0.08;
     }
-
+    40% {
+        opacity: 0.25;
+    }
+    60% {
+        opacity: 0.55;
+    }
+    80% {
+        opacity: 0.85;
+    }
     100% {
-        bottom: 82px;
+        bottom: 78px;
         opacity: 1;
     }
 }
 
+.subtitle {
+    margin-top: 14px;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 .email {
-    margin-top: 40px;
+    margin-top: 18px;
     font-size: 18px;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
 }
 
 .email a {
     color: white;
     text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
 .email a:hover {
     opacity: 0.8;
 }
-
 </style>
-
 </head>
 
 <body>
-
 <div class="container">
 
     <div class="logo">
         IST<span class="last-i">I<span class="sun"></span></span>
+    </div>
+
+    <div class="subtitle">
+        International Sports Tourism Institute
     </div>
 
     <div class="email">
@@ -101,6 +113,5 @@ body {
     </div>
 
 </div>
-
 </body>
 </html>
