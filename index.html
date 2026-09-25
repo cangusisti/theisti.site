@@ -84,8 +84,21 @@ body {
     }
 }
 
-.email {
+.tagline {
     margin-top: 18px;
+    color: white;
+    font-size: clamp(14px, 4vw, 18px);
+    letter-spacing: 1.5px;
+    font-style: italic;
+}
+
+.email {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    text-align: center;
+
     font-size: clamp(14px, 4vw, 18px);
     letter-spacing: 1.5px;
 }
@@ -107,6 +120,10 @@ body {
 
     <div class="logo">
         IST<span class="last-i">I<span class="sun"></span></span>
+    </div>
+
+    <div class="tagline">
+        Elevating destinations through sport
     </div>
 
     <div class="email">
