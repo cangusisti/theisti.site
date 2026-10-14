@@ -6,6 +6,11 @@
 
 <title>ISTI</title>
 
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@500&display=swap" rel="stylesheet">
+
 <style>
 html {
     height: 100%;
@@ -25,7 +30,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    font-family: Garamond, Georgia, serif;
+    font-family: "Manrope", sans-serif;
 }
 
 .container {
@@ -35,12 +40,16 @@ body {
     overflow: visible;
 }
 
+/* ISTI LOGO */
 .logo {
+    font-family: "Cormorant Garamond", Garamond, Georgia, serif;
+
     color: white;
-    font-size: clamp(56px, 18vw, 84px);
-    font-weight: normal;
-    letter-spacing: clamp(2px, 1vw, 4px);
-    line-height: 1;
+    font-size: clamp(64px, 18vw, 92px);
+    font-weight: 600;
+
+    letter-spacing: clamp(1px, 0.7vw, 3px);
+    line-height: 0.9;
 }
 
 .last-i {
@@ -52,12 +61,22 @@ body {
     position: absolute;
     width: clamp(12px, 4vw, 18px);
     height: clamp(12px, 4vw, 18px);
-    background: radial-gradient(circle, #FFD84D 0%, #FFCC33 100%);
+
+    background: radial-gradient(
+        circle,
+        #FFD84D 0%,
+        #FFCC33 100%
+    );
+
     border-radius: 50%;
+
     left: 50%;
     transform: translateX(-50%);
+
     bottom: -10px;
+
     opacity: 0.02;
+
     animation: sunrise 6s ease-out forwards;
 }
 
@@ -66,55 +85,81 @@ body {
         bottom: -10px;
         opacity: 0.02;
     }
+
     20% {
         opacity: 0.08;
     }
+
     40% {
         opacity: 0.25;
     }
+
     60% {
         opacity: 0.55;
     }
+
     80% {
         opacity: 0.85;
     }
+
     100% {
         bottom: 0.9em;
         opacity: 1;
     }
 }
 
+/* TAGLINE */
 .tagline {
-    margin-top: 18px;
+    margin-top: 22px;
+
+    font-family: "Cormorant Garamond", Garamond, Georgia, serif;
+    font-weight: 500;
+
     color: white;
-    font-size: clamp(14px, 4vw, 18px);
-    letter-spacing: 1.5px;
+
+    font-size: clamp(12px, 4vw, 24px);
+
+    letter-spacing: 0.2px;
+
+    line-height: 1.2;
 }
 
+/* EMAIL */
 .email {
     position: fixed;
+
     left: 0;
     right: 0;
+
     bottom: calc(24px + env(safe-area-inset-bottom));
+
     text-align: center;
 
-    font-size: clamp(14px, 4vw, 18px);
-    letter-spacing: 1.5px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+
+    font-size: clamp(11px, 3vw, 14px);
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
 }
 
 .email a {
     color: white;
     text-decoration: none;
+
     transition: opacity 0.2s ease;
 }
 
 .email a:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
     <div class="logo">
@@ -126,9 +171,12 @@ body {
     </div>
 
     <div class="email">
-        <a href="mailto:hello@theisti.com">hello@theisti.com</a>
+        <a href="mailto:hello@theisti.com">
+            hello@theisti.com
+        </a>
     </div>
 
 </div>
+
 </body>
 </html>
